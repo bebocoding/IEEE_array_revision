@@ -27,9 +27,13 @@ public class Array {
         
     }
     public void prob2(int k,int value){
+        for(int i =nElems;i>k;i--){
+            arr[i] = arr[i-1];
+        }
         arr[k] = value;
-        for(int i =nElems-k;i<nElems-1;i++){
-            arr[i] = arr[i+1];
+        nElems++;
+        for(int j =nElems-k;j<nElems-1;j++){
+            arr[j] = arr[j+1];
         }
         nElems--;
     }
